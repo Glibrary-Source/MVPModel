@@ -20,6 +20,8 @@ class InfoLocalDataSource(context: Context) : InfoDataSource {
     private val editor = sharedPreferences.edit()
 
     override fun getInfo(callback: InfoDataSource.LoadInfoCallback) {
+        editor.clear()
+        editor.commit()
         var info = sharedPreferences.getString("info", null)
         if(info != null) {
             callback.onInfoLoaded(JSONObject(info))
