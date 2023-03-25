@@ -2,21 +2,15 @@ package com.example.mvptest
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import com.example.mvptest.contractor.Contract
+import com.example.mvptest.contractor.MainContract
 import com.example.mvptest.databinding.ActivityMainBinding
-import com.example.mvptest.model.InfoRepository
-import com.example.mvptest.presenter.Presenter
-import org.json.JSONObject
+import com.example.mvptest.model.User
+import com.example.mvptest.presenter.MainPresenter
 
+class MainActivity : AppCompatActivity(), MainContract.View{
 
-class MainActivity : AppCompatActivity(), Contract.View {
-
-    private lateinit var presenter: Presenter
-    private lateinit var repository: InfoRepository
     private lateinit var binding: ActivityMainBinding
-
-
+    private lateinit var presenter: MainContract.Presenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -24,36 +18,26 @@ class MainActivity : AppCompatActivity(), Contract.View {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        repository = InfoRepository(this)
-        presenter = Presenter(this@MainActivity, repository)
 
-        presenter.initInfo()
-        initButtonListener()
+        presenter = MainPresenter(this)
+        presenter.getUsers()
+
+
 
     }
 
-    override fun showInfo(info: JSONObject) {
-        binding.outputName.text = info.getString("name")
-        binding.outputEmail.text = info.getString("email")
-
-        presenter.initInfo()
-        initButtonListener()
+    override fun showUsers(users: List<User>) {
+        binding.outputEmail.text = users.toString()
     }
 
-    private fun initButtonListener() {
-        binding.btnSave.setOnClickListener {
-            Log.d("KBW", "hi")
-
-
-            var info = JSONObject()
-            info.put("name", binding.editName.text.toString())
-            info.put("email", binding.editEmail.text.toString())
-
-            binding.editName.text.clear()
-            binding.editEmail.text.clear()
-
-            presenter.setInfo(info)
-            presenter.saveInfo(info)
-        }
+    override fun showError(error: String) {
+        binding.outputEmail.text = error
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.onDestroy()
+    }
+
+
 }
