@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.mvptest.contractor.TastyContract
 import com.example.mvptest.databinding.ActivityMainBinding
-import com.example.mvptest.network.FinalStoreDataModel
+import com.example.mvptest.model.FinalStoreDataModel
 import com.example.mvptest.presenter.TastyPresenter
 
 class MainActivity : AppCompatActivity(), TastyContract.View{
@@ -21,6 +21,16 @@ class MainActivity : AppCompatActivity(), TastyContract.View{
         presenter = TastyPresenter(this)
         presenter.getTasty()
 
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.add(R.id.container_fragment,MvpFragment())
+        transaction.commit()
+
+        binding.btnChangeFragment.setOnClickListener {
+            transaction.replace(R.id.container_fragment, MvpFragment())
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
+
     }
 
     override fun showTasty(data: FinalStoreDataModel) {
@@ -35,6 +45,5 @@ class MainActivity : AppCompatActivity(), TastyContract.View{
         super.onDestroy()
         presenter.onDestroy()
     }
-
 
 }

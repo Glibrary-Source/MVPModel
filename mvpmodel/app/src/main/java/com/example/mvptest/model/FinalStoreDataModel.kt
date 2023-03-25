@@ -1,4 +1,4 @@
-package com.example.mvptest.network
+package com.example.mvptest.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

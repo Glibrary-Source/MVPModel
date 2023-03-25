@@ -1,6 +1,6 @@
 package com.example.mvptest.contractor
 
-import com.example.mvptest.network.FinalStoreDataModel
+import com.example.mvptest.model.FinalStoreDataModel
 
 interface TastyContract {
 

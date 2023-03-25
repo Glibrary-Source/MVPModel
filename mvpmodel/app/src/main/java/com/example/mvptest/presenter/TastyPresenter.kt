@@ -1,6 +1,8 @@
 package com.example.mvptest.presenter
 
 import com.example.mvptest.contractor.TastyContract
+import com.example.mvptest.model.FinalStoreDataModel
+import com.example.mvptest.model.RequestLocationData
 import com.example.mvptest.network.*
 import com.google.android.gms.maps.model.LatLng
 import retrofit2.Call
