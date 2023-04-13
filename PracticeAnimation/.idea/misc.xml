@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/qn651/androidStudioProject/PracticeAnimation/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1175" />
+        <entry key="..\:/Users/qn651/androidStudioProject/PracticeAnimation/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1175" />
+        <entry key="..\:/Users/qn651/androidStudioProject/PracticeAnimation/app/src/main/res/drawable/main_radius.xml" value="0.116" />
+        <entry key="..\:/Users/qn651/androidStudioProject/PracticeAnimation/app/src/main/res/layout-land/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/qn651/androidStudioProject/PracticeAnimation/app/src/main/res/layout-sw600dp/activity_main.xml" value="0.17430555555555555" />
+        <entry key="..\:/Users/qn651/androidStudioProject/PracticeAnimation/app/src/main/res/layout/activity_add.xml" value="0.29559270516717323" />
+        <entry key="..\:/Users/qn651/androidStudioProject/PracticeAnimation/app/src/main/res/layout/activity_insert.xml" value="0.288500506585613" />
+        <entry key="..\:/Users/qn651/androidStudioProject/PracticeAnimation/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/qn651/androidStudioProject/PracticeAnimation/app/src/main/res/layout/activity_second.xml" value="0.23378926038500505" />
+        <entry key="..\:/Users/qn651/androidStudioProject/PracticeAnimation/app/src/main/res/layout/fragment_park_bottom_sheet.xml" value="0.29559270516717323" />
+        <entry key="..\:/Users/qn651/androidStudioProject/PracticeAnimation/app/src/main/res/layout/grid_view_item.xml" value="0.3731481481481482" />
+        <entry key="..\:/Users/qn651/androidStudioProject/PracticeAnimation/app/src/main/res/layout/item_cat.xml" value="0.29508611955420466" />
+        <entry key="..\:/Users/qn651/androidStudioProject/PracticeAnimation/app/src/main/res/layout/keyframe2.xml" value="0.2" />
+        <entry key="..\:/Users/qn651/androidStudioProject/PracticeAnimation/app/src/main/res/layout/keyframe3.xml" value="0.2064814814814815" />
+        <entry key="..\:/Users/qn651/androidStudioProject/PracticeAnimation/app/src/main/res/layout/list_item.xml" value="0.29559270516717323" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.22" />
+      </ProjectState>
+    </option>
+  </component>
+</project>
